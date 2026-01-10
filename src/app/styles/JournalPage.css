@@ -1,0 +1,84 @@
+/* src/pages/JournalPage.css */
+.journal-page-container {
+    padding: var(--spacing-unit) * 3;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 8px 20px var(--shadow-color);
+    margin-bottom: var(--spacing-unit) * 4;
+}
+
+.journal-page-container h2 {
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: var(--spacing-unit) * 4;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.journal-page-container section {
+    margin-bottom: var(--spacing-unit) * 3;
+    padding: var(--spacing-unit) * 3;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.journal-page-container section h3 {
+    color: var(--primary-light);
+    font-size: 1.6em;
+    margin-bottom: var(--spacing-unit) * 2;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--spacing-unit) * 1.5;
+    font-weight: 600;
+}
+
+.journal-page-container textarea {
+    width: 100%;
+    min-height: 180px;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: var(--spacing-unit) * 2;
+    border-radius: var(--border-radius-md);
+    font-size: 1em;
+    resize: vertical;
+    margin-bottom: var(--spacing-unit) * 2;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.journal-page-container input[type="text"] {
+    margin-bottom: var(--spacing-unit) * 2; /* Adjust margin */
+}
+
+.journal-page-container .write-journal-section button {
+    margin-top: var(--spacing-unit);
+    display: block; /* Make button full width or control with flexbox */
+    width: fit-content;
+}
+
+.journal-page-container .edit-entry-section button {
+    margin-top: var(--spacing-unit);
+}
+
+.journal-page-container .search-entries-section .search-input-group {
+    display: flex;
+    gap: var(--spacing-unit);
+    margin-bottom: var(--spacing-unit) * 2;
+}
+
+.journal-page-container .search-entries-section .search-input-group input {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+.journal-page-container .search-results-placeholder {
+    margin-top: var(--spacing-unit) * 2;
+    padding: var(--spacing-unit) * 2;
+    background-color: var(--background-color);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--border-radius-md);
+    color: var(--text-light);
+    font-style: italic;
+    text-align: center;
+}

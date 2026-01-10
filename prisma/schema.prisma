@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Day {
+  id                String            @id @default(uuid())
+  date              DateTime          @unique
+  journal           String?           // Free text for journal/diary
+  mood              Int?              // 1-5 scale
+  rating            Int?              // Day rating
+  productivityScore Int?              // Calculated score
+  tasks             Task[]
+  habitCompletions  HabitCompletion[]
+  
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+}
+
+model Task {
+  id        String   @id @default(uuid())
+  title     String
+  completed Boolean  @default(false)
+  dayId     String?
+  day       Day?     @relation(fields: [dayId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Habit {
+  id          String            @id @default(uuid())
+  name        String
+  frequency   String            // "daily", "weekly"
+  active      Boolean           @default(true)
+  goalId      String?
+  goal        Goal?             @relation(fields: [goalId], references: [id])
+  completions HabitCompletion[]
+
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+}
+
+model HabitCompletion {
+  id        String   @id @default(uuid())
+  habitId   String
+  dayId     String
+  completed Boolean  @default(false)
+  habit     Habit    @relation(fields: [habitId], references: [id])
+  day       Day      @relation(fields: [dayId], references: [id])
+
+  @@unique([habitId, dayId])
+}
+
+model Goal {
+  id              String   @id @default(uuid())
+  title           String
+  target          Int      // e.g., 20 pages
+  currentProgress Int      @default(0)
+  habits          Habit[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+// Keeping Reflection for backward compatibility or migration if needed, but Day is preferred now.
+model Reflection {
+  id        String   @id @default(uuid())
+  month     String   @unique
+  content   String   // JSON string
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

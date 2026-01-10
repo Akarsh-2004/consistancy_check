@@ -1,0 +1,49 @@
+{
+    "name": "growth-tracker-desktop",
+    "private": true,
+    "version": "1.0.0",
+    "main": "dist-electron/main.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build && electron-builder",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@prisma/client": "^6.19.1",
+        "@types/uuid": "^10.0.0",
+        "clsx": "^2.1.1",
+        "date-fns": "^4.1.0",
+        "loose-envify": "^1.4.0",
+        "lucide-react": "^0.562.0",
+        "object-assign": "^4.1.1",
+        "react": "^18.2.0",
+        "react-calendar": "^5.0.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^7.12.0",
+        "recharts": "^2.12.0",
+        "uuid": "^13.0.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.66",
+        "@types/react-dom": "^18.2.22",
+        "@vitejs/plugin-react": "^4.2.1",
+        "electron": "^30.0.1",
+        "electron-builder": "^24.13.3",
+        "prisma": "^6.19.1",
+        "typescript": "^5.2.2",
+        "vite": "^5.2.0",
+        "vite-plugin-electron": "^0.28.6"
+    },
+    "build": {
+        "appId": "com.growthtracker.app",
+        "productName": "Growth Tracker",
+        "directories": {
+            "output": "dist"
+        },
+        "win": {
+            "target": "nsis",
+            "verifyUpdateCodeSignature": false,
+            "useSymbolicLinks": false
+        }
+    }
+}

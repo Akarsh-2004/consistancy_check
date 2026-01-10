@@ -1,0 +1,78 @@
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    background-color: #0f172a;
+    transition: all 0.3s;
+}
+
+.task-item:hover {
+    border-color: #334155;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.task-item.completed {
+    background-color: rgba(15, 23, 42, 0.5);
+    border-color: #1e293b;
+    opacity: 0.6;
+}
+
+.check-btn {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #475569;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.task-item:hover .check-btn {
+    border-color: #818cf8;
+}
+
+.check-btn.checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.task-content {
+    flex: 1;
+}
+
+.task-title {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #e2e8f0;
+    transition: all 0.2s;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: #64748b;
+}
+
+.delete-btn {
+    background: transparent;
+    color: #475569;
+    padding: 8px;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.task-item:hover .delete-btn {
+    opacity: 1;
+}
+
+.delete-btn:hover {
+    color: #f87171;
+    background-color: #1e293b;
+}

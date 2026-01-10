@@ -1,0 +1,92 @@
+/* Dashboard Page - Mature Analytics */
+
+.dashboard-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard-page-container h2 {
+    font-family: var(--font-family-serif);
+    font-size: 2rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 3rem;
+    border-bottom: none;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.analytics-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: var(--border-radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.analytics-card h3 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-light);
+}
+
+.card-slim {
+    grid-column: span 4;
+}
+
+.card-wide {
+    grid-column: span 8;
+}
+
+.card-full {
+    grid-column: span 12;
+}
+
+.metric-value {
+    font-family: var(--font-family-serif);
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.placeholder-chart {
+    background: #090a0c;
+    height: 200px;
+    border-radius: var(--border-radius-sm);
+    border: 1px dashed var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.day-comparison-section {
+    padding: 2.5rem;
+    background: #090a0c;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+}
+
+.day-comparison-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+
+    .card-slim,
+    .card-wide {
+        grid-column: span 12;
+    }
+}

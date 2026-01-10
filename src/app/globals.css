@@ -1,0 +1,211 @@
+/* Mature Dark Design System */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+    /* Deep Charcoal & Professional Slate Palette */
+    --background-color: #0d0f12;
+    /* Darker, less blue */
+    --card-background: #16191d;
+    --text-color: #e2e8f0;
+    --text-light: #94a3b8;
+
+    /* Muted Slate Accents */
+    --primary-color: #475569;
+    --primary-light: #64748b;
+    --primary-dark: #334155;
+
+    --accent-color: #94a3b8;
+    --accent-light: #cbd5e1;
+    --accent-dark: #1e293b;
+
+    --secondary-color: #a3907a;
+    /* Subtle Earthy Bronze */
+
+    /* Meaningful Status Colors (Muted) */
+    --success-color: #273733;
+    --success-text: #6ee7b7;
+    --warning-color: #3f3522;
+    --warning-text: #fcd34d;
+    --error-color: #3b1e1e;
+    --error-text: #fca5a5;
+
+    /* UI Elements */
+    --border-color: #262b32;
+    --shadow-color: rgba(0, 0, 0, 0.6);
+    --glass-bg: rgba(22, 25, 29, 0.8);
+
+    /* Typography */
+    --font-family-sans: 'Inter', -apple-system, system-ui, sans-serif;
+    --font-family-serif: 'Crimson Pro', serif;
+    --font-family-mono: 'JetBrains Mono', monospace;
+
+    /* Spacing & Radius */
+    --spacing-unit: 8px;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-family-sans);
+    background-color: var(--background-color);
+    background-image: radial-gradient(circle at top right, #1a1d23, #0d0f12);
+    color: var(--text-color);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+/* Base UI Elements */
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+h1 {
+    font-family: var(--font-family-serif);
+    font-size: 2.25rem;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+/* Mature Button Style */
+button {
+    font-family: var(--font-family-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
+    background: var(--card-background);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px var(--shadow-color);
+}
+
+button:hover {
+    background: #20242a;
+    border-color: var(--primary-light);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button.primary {
+    background: var(--primary-color);
+    border-color: var(--primary-dark);
+    color: white;
+}
+
+button.primary:hover {
+    background: var(--primary-light);
+}
+
+/* Mature Inputs */
+input,
+textarea,
+select {
+    background: #090a0c;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 10px 14px;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.9rem;
+    font-family: var(--font-family-sans);
+    transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Glassmorphism - Mature Version */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Utility */
+.card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 20px;
+}
+
+.text-serif {
+    font-family: var(--font-family-serif);
+}
+
+.text-muted {
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2e333d;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3e444f;
+}
+
+/* Animations - Subtle */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fade {
+    animation: fadeIn 0.4s ease-out;
+}

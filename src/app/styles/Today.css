@@ -1,0 +1,251 @@
+/* Today Page - Refined & Calm */
+
+.today-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Journal Area */
+.journal-section {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.journal-header {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.journal-editor {
+    width: 100%;
+    min-height: 200px;
+    background: transparent;
+    border: none;
+    font-family: var(--font-family-sans);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    resize: none;
+    padding: 0;
+}
+
+.journal-editor:focus {
+    border: none;
+    background: transparent;
+}
+
+/* Controls */
+.interaction-row {
+    display: flex;
+    gap: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.control-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.selector-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.selector-btn {
+    background: #0d0f12;
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+    font-size: 1.25rem;
+    border-radius: var(--border-radius-sm);
+    transition: all 0.2s;
+    box-shadow: none;
+}
+
+.selector-btn:hover {
+    background: var(--accent-dark);
+    transform: none;
+}
+
+.selector-btn.active {
+    background: var(--primary-dark);
+    border-color: var(--primary-light);
+    transform: none;
+}
+
+/* Tasks */
+.tasks-section h3,
+.habits-section h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.task-input-wrapper {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 12px;
+}
+
+.task-input {
+    flex: 1;
+    background: #0d0f12;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+}
+
+.task-checkbox {
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--primary-light);
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-checkbox.checked {
+    background: var(--primary-color);
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+/* Habits */
+.habits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.habit-card {
+    padding: 1rem 1.25rem;
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.habit-card.completed {
+    border-color: var(--success-text);
+    background: rgba(45, 63, 52, 0.2);
+}
+
+.habit-name {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.bar-container {
+    height: 2px;
+    background: #2e333d;
+    width: 100%;
+}
+
+.bar-fill {
+    background: var(--primary-light);
+    height: 100%;
+}
+
+/* Focus Mode Component - New Feature */
+.focus-mode-section {
+    text-align: center;
+    padding: 2rem;
+    background: #090a0c;
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.focus-timer {
+    font-family: var(--font-family-mono);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.focus-duration-input {
+    background: #0d0f12;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-family: var(--font-family-mono);
+    border-radius: var(--border-radius-sm);
+    margin-top: 4px;
+}
+
+.focus-duration-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Insights Panel - Minimalized */
+.insights-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.insight-card {
+    padding: 1.5rem;
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+}
+
+.score-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score-value {
+    font-family: var(--font-family-serif);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .insights-container {
+        grid-template-columns: 1fr;
+    }
+}

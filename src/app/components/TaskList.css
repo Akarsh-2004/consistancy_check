@@ -1,0 +1,70 @@
+.task-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-form {
+    position: relative;
+}
+
+.task-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.task-input {
+    width: 100%;
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 12px 16px 12px 40px;
+    color: #e2e8f0;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.task-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-select {
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 0 12px;
+    color: #94a3b8;
+    outline: none;
+    cursor: pointer;
+}
+
+.category-select:focus {
+    border-color: var(--primary-color);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 0;
+    color: #475569;
+}
+
+.tasks-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

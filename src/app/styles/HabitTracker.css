@@ -1,0 +1,61 @@
+/* src/app/styles/HabitTracker.css */
+.habit-tracker-container {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-unit) * 3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.habit-tracker-container h3 {
+    color: var(--primary-light);
+    font-size: 1.6em;
+    margin-bottom: var(--spacing-unit) * 2;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--spacing-unit) * 1.5;
+    font-weight: 600;
+}
+
+.habit-tracker-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.habit-tracker-container li {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-unit) * 1.5 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.habit-tracker-container li:last-child {
+    border-bottom: none;
+}
+
+.habit-tracker-container li input[type="checkbox"] {
+    margin-right: var(--spacing-unit) * 2;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.habit-tracker-container li span {
+    flex-grow: 1;
+}
+
+.habit-tracker-container li.completed span {
+    text-decoration: line-through;
+    color: var(--text-light);
+}
+
+.habit-tracker-container .habit-streak {
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-left: var(--spacing-unit) * 2;
+}

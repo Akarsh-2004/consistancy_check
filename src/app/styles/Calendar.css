@@ -1,0 +1,146 @@
+/* Calendar Page - Mature & Dark */
+
+.calendar-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.custom-calendar-wrapper {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: var(--border-radius-md);
+}
+
+.react-calendar {
+    width: 100% !important;
+    background: transparent !important;
+    border: none !important;
+    font-family: var(--font-family-sans) !important;
+    color: var(--text-color) !important;
+}
+
+.react-calendar__tile {
+    padding: 1.5rem 0.5rem !important;
+    border-radius: var(--border-radius-sm);
+    transition: all 0.2s;
+}
+
+.react-calendar__tile:enabled:hover {
+    background-color: #1a1d23 !important;
+    color: var(--primary-light) !important;
+}
+
+.react-calendar__tile--now {
+    background: #0d0f12 !important;
+    border: 1px solid var(--primary-dark) !important;
+}
+
+.react-calendar__tile--active {
+    background: var(--primary-color) !important;
+    color: white !important;
+}
+
+.react-calendar__navigation button:enabled:hover {
+    background-color: #1a1d23 !important;
+}
+
+.react-calendar__month-view__weekdays {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-light);
+    opacity: 0.6;
+}
+
+/* Day Summary Sidebar */
+.day-summary-sidebar {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: var(--border-radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.summary-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.summary-item .label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.journal-preview {
+    font-family: var(--font-family-serif);
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-top: 8px;
+}
+
+.summary-section h4 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.mini-habit-list,
+.mini-task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mini-habit-item,
+.mini-task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2e333d;
+}
+
+.status-dot.completed {
+    background: var(--success-text);
+    box-shadow: 0 0 8px var(--success-color);
+}
+
+.mini-task-item .checkbox {
+    font-family: var(--font-family-mono);
+    color: var(--primary-light);
+}
+
+.mini-task-item .text.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.empty-day-state {
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--text-light);
+    font-style: italic;
+}

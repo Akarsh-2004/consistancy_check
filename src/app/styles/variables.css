@@ -1,0 +1,22 @@
+:root {
+  --background-color: #121212; /* Deep dark background */
+  --card-background: #1e1e1e; /* Slightly lighter dark for cards */
+  --text-color: #e0e0e0; /* Off-white for readability */
+  --text-light: #b0b0b0; /* Lighter text for secondary info */
+  --primary-color: #8a2be2; /* Amethyst purple for primary actions */
+  --primary-light: #9c4dff; /* Lighter purple for hover/active */
+  --primary-light-rgb: 156, 77, 255; /* RGB values for primary-light */
+  --accent-color: #00bcd4; /* Cyan for highlights/accents */
+  --accent-color-rgb: 0, 188, 212; /* RGB values for accent-color */
+  --border-color: #333333; /* Soft dark border */
+  --shadow-color: rgba(0, 0, 0, 0.6); /* Pronounced shadow for depth */
+
+  --font-family-sans: 'Inter', sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing and Sizing */
+  --spacing-unit: 8px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+}

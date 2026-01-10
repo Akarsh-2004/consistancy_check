@@ -1,0 +1,18 @@
+/* src/components/Streak.css */
+.streak-item {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+.streak-item h4 {
+    margin: 0;
+    color: var(--accent-color);
+}

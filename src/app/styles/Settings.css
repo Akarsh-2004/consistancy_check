@@ -1,0 +1,103 @@
+/* Settings Page - Clean & Functional */
+
+.settings-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.settings-container h2 {
+    font-family: var(--font-family-serif);
+    font-size: 2rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 2rem;
+    border-bottom: none;
+}
+
+.settings-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.settings-section h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.add-item-form {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 1rem;
+    background: var(--card-background);
+    padding: 1.5rem;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
+}
+
+.goal-form {
+    grid-template-columns: 1fr;
+}
+
+.items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+}
+
+.habit-checkbox-label {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: transparent;
+    color: var(--text-light);
+    padding: 6px 12px;
+    font-size: 0.8rem;
+}
+
+.delete-btn:hover {
+    background: var(--error-color);
+    color: var(--error-text);
+    border-color: var(--error-color);
+}
+
+.preference-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.data-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.action-btn {
+    background: #0d0f12;
+    font-weight: 500;
+}

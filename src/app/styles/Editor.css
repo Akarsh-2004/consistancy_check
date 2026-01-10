@@ -1,0 +1,21 @@
+/* src/app/styles/Editor.css */
+.editor-textarea {
+  width: 100%;
+  min-height: 150px;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: var(--spacing-unit) * 2;
+  border-radius: var(--border-radius-md);
+  font-size: 1em;
+  resize: vertical;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+  line-height: 1.5;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.editor-textarea:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.3);
+  outline: none;
+}

@@ -1,0 +1,132 @@
+/* Goals Page - Mature & Structured */
+
+.goals-page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.goals-page-container h2 {
+    font-family: var(--font-family-serif);
+    font-size: 2rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 3rem;
+    border-bottom: none;
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.goal-card {
+    background: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: var(--border-radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.goal-card:hover {
+    border-color: var(--primary-light);
+    transform: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.goal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.goal-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.deadline-badge {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    background: #0d0f12;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.deadline-badge.urgent {
+    color: var(--error-text);
+    border-color: var(--error-color);
+}
+
+.goal-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.progress-percentage {
+    font-family: var(--font-family-mono);
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.progress-bar-large {
+    height: 4px;
+    background: #2e333d;
+    width: 100%;
+}
+
+.progress-fill-large {
+    background: var(--primary-light);
+    height: 100%;
+}
+
+.progress-shine {
+    display: none;
+    /* Removed neon effect */
+}
+
+.goal-body {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+}
+
+.label-pill {
+    font-size: 0.7rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+.habits-list {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.status-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 16px;
+    background: #0d0f12;
+    border: 1px solid var(--border-color);
+    border-radius: 100px;
+    text-transform: uppercase;
+}
+
+.status-badge.completed {
+    color: var(--success-text);
+    border-color: var(--success-color);
+}
