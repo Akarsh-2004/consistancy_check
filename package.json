@@ -42,8 +42,7 @@
         },
         "win": {
             "target": "nsis",
-            "verifyUpdateCodeSignature": false,
-            "useSymbolicLinks": false
+            "verifyUpdateCodeSignature": false
         }
     }
 }
