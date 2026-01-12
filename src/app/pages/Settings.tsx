@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../styles/Settings.css';
-import { AppState, createHabit, deleteHabit, updateHabit, createGoal, deleteGoal, updateGoal } from '../lib/state';
+import { AppState, createHabit, deleteHabit, createGoal, deleteGoal } from '../lib/state';
 
 interface SettingsProps {
   appState: AppState;
