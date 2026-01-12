@@ -2,7 +2,9 @@
     "name": "growth-tracker-desktop",
     "private": true,
     "version": "1.0.0",
-    "main": "./electron/main.js",
+    "description": "Track your habits and personal growth",
+    "author": "Your Name",
+    "main": "dist/electron/main.js",
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build && electron-builder",
@@ -37,23 +39,12 @@
     "build": {
         "appId": "com.growthtracker.app",
         "productName": "Growth Tracker",
-        "description": "Track your habits and personal growth",
-        "author": "Your Name",
         "directories": {
             "output": "release",
             "buildResources": "assets"
         },
         "files": [
-            "dist/**/*",
-            "electron/**/*",
-            "!**/node_modules/*/test/**/*"
-        ],
-        "extraResources": [
-            {
-                "from": "dist",
-                "to": "app",
-                "filter": ["**/*"]
-            }
+            "dist/**/*"
         ],
         "win": {
             "target": "nsis",

@@ -1,0 +1,17 @@
+directories:
+  output: release
+  buildResources: assets
+appId: com.growthtracker.app
+productName: Growth Tracker
+files:
+  - filter:
+      - dist/**/*
+win:
+  target: nsis
+  verifyUpdateCodeSignature: false
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+electronVersion: 30.5.1

@@ -35,13 +35,15 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist/app',
       emptyOutDir: true,
+      chunkSizeWarningLimit: 2000,
       rollupOptions: {
         input: {
           main: resolve(__dirname, 'index.html'),
         },
         output: {
-          entryFileNames: 'assets/[name].js',
-          chunkFileNames: 'assets/[name].js',
+          manualChunks: undefined,
+          entryFileNames: 'assets/main.js',
+          chunkFileNames: 'assets/main.js',
           assetFileNames: 'assets/[name].[ext]',
         },
       },
