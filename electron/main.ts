@@ -24,7 +24,26 @@ function createWindow() {
     // Open the DevTools in development mode
     win.webContents.openDevTools();
   } else {
-    win.loadFile(path.join(__dirname, '../dist/index.html'));
+    // In production, load the built files
+    const indexPath = path.join(__dirname, '..', 'app', 'index.html');
+    console.log('Loading index.html from:', indexPath);
+    
+    // Add a small delay to ensure the file is ready
+    setTimeout(() => {
+      win.loadFile(indexPath).catch(err => {
+        console.error('Failed to load index.html:', err);
+        // Fallback to a simple error page
+        win.loadURL(`data:text/html;charset=utf-8,
+          <html>
+            <body>
+              <h1>Error Loading Application</h1>
+              <p>Failed to load the application. Please try reinstalling.</p>
+              <pre>${err}</pre>
+            </body>
+          </html>
+        `);
+      });
+    }, 1000);
   }
 
   // Show the window once it's ready

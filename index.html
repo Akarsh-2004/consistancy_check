@@ -8,5 +8,11 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Add error handling for production
+      window.addEventListener('error', (event) => {
+        console.error('Uncaught error:', event.error);
+      });
+    </script>
   </body>
 </html>
